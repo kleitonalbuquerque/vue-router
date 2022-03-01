@@ -3,7 +3,9 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/mariana">Mariana</router-link>
+      <router-link :to="{ name: 'Mariana', params: { dado: 'Albuquerque' } }"
+        >Mariana</router-link
+      >
     </div>
     <router-view />
   </div>
