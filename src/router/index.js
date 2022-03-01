@@ -18,9 +18,17 @@ const routes = [
     component: About,
   },
   {
-    path: "/mariana/:dado",
+    // path: "/mariana/:dado",
+    path: "/mariana",
     name: "Mariana",
     component: Cadastro,
+    children: [
+      {
+        path: "albuquerque", // rotas filhas não podem ter '/' no início
+        name: "Albuquerque",
+        component: About,
+      },
+    ],
   },
 ];
 
